@@ -10,6 +10,9 @@ let package = Package(
         .library(
             name: "TinyForth",
             targets: ["TinyForth"]),
+        .executable(
+            name: "t4th",
+            targets: ["t4th"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -23,6 +26,9 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "TinyForthTests",
+            dependencies: ["TinyForth"]),
+        .target(
+            name: "t4th",
             dependencies: ["TinyForth"]),
     ]
 )
